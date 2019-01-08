@@ -225,7 +225,7 @@ class TopicRank(LoadFile):
 
                 # offsets of the indexes
                 indexes_offsets = [offsets[j] for j in indexes]
-                most_frequent = indexes_offsets.index(min(indexes_offsets))
+                most_frequent = indexes[indexes_offsets.index(min(indexes_offsets))]
                 self.weights[topic[most_frequent]] = w[i]
 
             else:
